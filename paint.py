@@ -110,6 +110,7 @@ def store(key, value):
     """
     state[key] = value
 
+    
 state = {'start': None, 'shape': line}
 setup(420, 420, 370, 0)
 onscreenclick(tap)

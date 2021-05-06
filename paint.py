@@ -36,20 +36,44 @@ def square(start, end):
 def circle(start, end):
     import turtle
     "Draw circle from start to end."
+<<<<<<< HEAD
     up()
     goto(start.x, start.y)
     down()
     begin_fill()
     turtle.circle(end.x - start.y)
     end_fill()
+=======
+    pass
+>>>>>>> be90397383725b6a75aaa033abb3eccee09386a0
 
 def rectangle(start, end):
     "Draw rectangle from start to end."
-    pass  # TODO
+    up()
+    goto(start.x, start.y)
+    down()
+    begin_fill()
+
+    for count in range(2):
+        forward(end.x - start.x)
+        left(90)
+        forward(end.y - start.y)
+        left(90)
+
+    end_fill()
 
 def triangle(start, end):
     "Draw triangle from start to end."
-    pass  # TODO
+    up()
+    goto(start.x, start.y)
+    down()
+    begin_fill()
+
+    for count in range(3):
+        forward(end.x - start.x) # draw base
+        left(120)
+
+    end_fill()
 
 def tap(x, y):
     "Store starting point or draw shape."

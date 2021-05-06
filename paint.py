@@ -1,3 +1,5 @@
+#Emilio Campuzano Mejia A01378948
+#Lorena Palomino Castillo A01378477
 """Paint, for drawing shapes.
 
 Exercises
@@ -34,17 +36,14 @@ def square(start, end):
     end_fill()
 
 def circle(start, end):
-    import turtle
     "Draw circle from start to end."
-
+    import turtle
     up()
     goto(start.x, start.y)
     down()
     begin_fill()
     turtle.circle(end.x - start.y)
     end_fill()
-
-
 
 def rectangle(start, end):
     "Draw rectangle from start to end."
@@ -69,7 +68,7 @@ def triangle(start, end):
     begin_fill()
 
     for count in range(3):
-        forward(end.x - start.x) # draw base
+        forward(end.x - start.x)
         left(120)
 
     end_fill()
@@ -94,6 +93,7 @@ state = {'start': None, 'shape': line}
 setup(420, 420, 370, 0)
 onscreenclick(tap)
 listen()
+"Se presiona la tecla u para poder rehacer alguna acción ya hecha"
 onkey(undo, 'u')
 "Se presiona la tecla K para cambiar a color negro"
 onkey(lambda: color('black'), 'K')
